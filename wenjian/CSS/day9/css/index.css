@@ -1,0 +1,166 @@
+.container-md {
+    margin: 0 auto;
+    width: 1204px;
+}
+
+.header {
+
+    height: 84px;
+    background-color: green;
+    overflow: hidden;
+}
+
+.top-logo {
+    float: left;
+    width: 176px;
+    height: 52px;
+    background:
+        red;
+    margin-top: 16px;
+}
+
+.nav {
+    float: left;
+    margin-left: 63px;
+}
+
+.nav li {
+    float: left;
+    line-height: 84px;
+
+}
+
+.nav li a {
+    padding: 0 28px;
+    background-color: red;
+}
+
+.shopping-cart {
+    width: 73px;
+    margin-top: 31px;
+    height: 22px;
+    float: right;
+    background-color: red;
+}
+
+.user-center {
+    float: right;
+    margin-left: 39px;
+    ;
+}
+
+.user-center li {
+    float: left;
+    line-height: 84px;
+}
+
+.user-center li a {
+    padding-right: 31px;
+    background-color: red;
+    ;
+}
+
+.swiper {
+    height: 360px;
+    position: relative;
+
+}
+
+.swiper image {
+    width: 100%;
+    height: 100%;
+}
+
+.layer {
+    /* 定位： 重叠 覆盖布局
+    绝对定位需要加参照物，参照物一般给到父元素身上，如果父元素没有，他会往上查找，知道找到body为止，这样就会以整个浏览器窗口为参照物了
+    一般给父元素加一个属性 position: relative; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 241px;
+    height: 360px;
+    /* 背景透明度可以用rgba ，rgb颜色的表示方式 alpha 透明度[0-1] [0.2= .2] */
+    background: rgba(2, 0, 0, .2);
+}
+
+.layer li {
+    height: 73px;
+    background: slateblue;
+}
+
+.layer li .hover-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 240px;
+}
+
+.column {
+    margin-top: 40px;
+}
+
+.column ul {
+    margin-left: -64px;
+}
+
+.column li {
+    position: relative;
+    width: 251px;
+    float: left;
+    margin-left: 64px;
+}
+
+.column li .pic {
+    width: 251px;
+    height: 141px;
+    background: darkorchid;
+}
+
+.column li .txt {
+    /* z-index：用来提高层级 值越大 越在上面 */
+    position: relative;
+    z-index: 9;
+    width: 251px;
+    height: 43px;
+    background: darksalmon;
+}
+
+.column li .col-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 251px;
+    height: 106px;
+    background: yellow;
+    /* 为了鼠标移入和移出同时都有动画的过渡效果，把transition一般加到元素没有鼠标的效果的身上*/
+    transition: bottom 1s ease;
+
+}
+
+.column li:hover .col-layer {
+    /* bottom 从 0 - 43 效果比较僵硬 所以需要加一个缓冲的动画  transition：属性的名称(all) 持续的时间  运动的曲线 延迟的时间*/
+    bottom: 43px;
+}
+
+.foot {float: left;
+    margin: 0 auto
+}
+
+.foot1 {
+    float: left;
+    background-color: tomato;
+    width: 245px;
+    height: 500px;
+
+
+}
+
+.foot2 {
+    float: left;
+    background-color: yellowgreen;
+    width: 397px;
+    height: 184px px;
+
+
+}

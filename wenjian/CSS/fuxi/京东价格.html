@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* afte */
+        .price {
+            width: 500px;
+            height: 80px;
+            border: 1px solid red;
+    }
+
+        .yuan-jia {
+            width: 50%;
+            height: 100%;
+            float: left;
+            background-color: red;
+            position: relative;
+         
+  }
+
+        .xian-jia {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .yuan-jia::after {
+            position: absolute;
+            content: " ";
+            top:0;
+            right:0;
+            border-width: 80px  32px  0 0; 
+            border-style: solid;
+            border-color: transparent rgb(255, 255, 255) transparent transparent;
+            width: 50;
+            height: 0;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="price">
+        <div class="yuan-jia">9999</div>
+        <div class="xian-jia">9.9</div>
+    </div>
+</body>
+
+</html>

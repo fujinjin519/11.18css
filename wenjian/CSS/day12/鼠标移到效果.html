@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--    1.过度动画
+        transition:过度动画的属性名称all
+                   过度动画的持续时间 时间越长 动画越慢
+                   过度动画的运动曲线 ease  匀速 linear线性
+                   过度动画的延迟时间 
+                
+       2. 变换
+         transform
+         +缩放 scale(0.8) scale(1.2)
+          位移  translate（x  y)
+          旋转-  rotate（45deg)
+          案例：鼠标移到图片上缩放的效果-> -->
+    <style>
+        .pic {
+            width: 200px;
+            height: 100px;
+            /*图片放大后会超出容器，所以要益出隐藏 */
+            overflow: hidden;
+        }
+
+        .pic img {
+            width: 200px;
+            height: 100px;
+            /*过度缓冲的效果，为了让图片的放大有个逐渐放大的过程，看起来没有那么僵硬,如果属性名称超过一个以上需要用all代表所有的属性名称  */
+            transition:transform 1s  ease;
+        }
+
+        .pic:hover img {
+            transform: scale(1.5);
+            opacity: 0.8;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="pic">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572583857381&di=6fb7b864b8f81b46f6abe8ff6dd658fd&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F10535079955%2F1000.jpg"
+            alt="">
+    </div>
+
+</body>
+
+</html>

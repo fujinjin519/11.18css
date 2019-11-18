@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background: salmon;
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png);
+            background-repeat:no-repeat ;
+        
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!--css3背景新增属性
+    css:5个属性直接合并成一个复合属性，中间空格隔开backgroud:
+ 1.背景颜色：backgroud-color/backgroud
+ 2.背景图片：background-img/background:url()
+ 3.背景的坐标位置：background-position：x  y 常用在雪碧图
+ 4.背景的平铺：background-repeat:repeat(平铺默认的)
+                             no-repeat(不平铺）
+                             repeat-x(横行平铺)
+                             repeat-y（纵向平铺）
+ 5.滚动条滚动的时候固定不动 background-attachment: fixed/scroll;
+
+    css3新增的：3个属性，不能合并成backgroud 复合属性，需要单独写
+    1.backgroud-size：x  y  宽度和高度 (背景尺寸)
+    
+    cover:背景的宽高同时缩放，直到碰到容器的水平和垂直边缘才会缩放，所以会出现被裁剪的现象 
+    contain:背景的宽和高只要有一个条件能够触碰到容器边缘就会停止缩放，所以会出现留白
+    
+    2.backgroud-clip：背景的裁剪的方式（在项目中用的不多）
+      backgroud-clip：border-box边框线往外裁剪
+      backgroud-clip：padding-box内填充往外进行裁剪（border部分的背景裁剪）
+      backgroud-clip：content-box内容往外的部分裁剪掉（padding 和border部分的背景裁剪掉）
+      backgroud-clip:text以文字往外进行裁剪（只保留文字后面的背景）
+
+    3.backgroud-origin:背景显示原点
+
+
+-->
+    <div class="box"></div>
+</body>
+
+</html>

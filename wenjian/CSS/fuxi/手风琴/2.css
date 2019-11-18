@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.demo {
+    width:643px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+.demo li {
+    width: 80px;
+    height: 400px;
+    overflow: hidden;
+    float: right;
+    position: relative
+
+}
+.demo li+li {
+    border-right: 3px solid #d95d45;
+}
+.demo li p {
+    width:80px;
+   height: 100%;
+    background: red;
+    color: seashell;
+    transition: width .4s ease .1s;
+}
+
+.demo li div {
+    position: absolute;
+    background: #474141;
+    color: #eee;
+    width:200px;
+    height:100%;
+    top:0;left: 0;
+    z-index: -1
+
+}
+.demo li:hover {
+    width: 200px;
+}
+
+.demo li::before {
+    width: 0;
+    height: 0;
+    content: "";
+    position: absolute;
+    border: 10px solid #0000;
+    border-color: red transparent transparent transparent;
+    top: 40px;
+  
+}

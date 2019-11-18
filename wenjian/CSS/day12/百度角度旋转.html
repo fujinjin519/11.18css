@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>角度旋转的遮罩层覆盖的特效</title>
+    <!-- 鼠标移动要元素上，遮罩层，以一定的角度旋转覆盖（例子：百度新闻侧边栏）
+    角度旋转动画：利用角度让blue消失
+        transform-origin: left top;固定点左上角 -->
+    <style>
+        *{padding: 0;margin: 0;}
+        .pic {
+
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        
+
+        }
+
+        .blue {
+            background: blue;
+            width: 100px;
+            height: 100px;
+        }
+
+        .mask {
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 0, 0, .6);
+            transform-origin: left top;
+            transition: all .6s ease;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .pic:hover .mask {
+            transform: rotate(-90deg);
+        }
+       
+        .mask p{font-size: 20px;color: #fff;transform: rotate(90deg) }
+    </style>
+</head>
+
+<body>
+    
+    <div class="pic">
+        <div class="blue"></div>
+        <div class="mask">
+            <!-- 解决文字旋转的方法：1.没加鼠标效果之前，就让文字线倒过来，这样鼠标角度旋转动画之后，文字就正常了2，鼠标效果上直接给默认倒过来的子，加一个角度旋转的属性，让文字回归正常 -->
+            <p>收藏本站</p>
+       
+        </div>
+       
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- css3属性 背景渐变：
+        线性渐变 linear-gradient(方位，颜色，颜色)
+    (to bottom 从上到下
+     to top    从下到上
+     to left 
+     to right
+     to  top left 
+      deg  角度  
+      
+      radial-gradient径向渐变--->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(red, yellow, green)
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(yellow, red, green);
+        }
+
+        h1 {
+            font-size: 100px;
+            background: linear-gradient(90deg, red,pink,yellow);
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p></p>
+    <h1>京东直播</h1>
+</body>
+
+</html>

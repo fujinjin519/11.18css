@@ -1,0 +1,101 @@
+/* 版心居中 公用 */
+.container-md{
+    width:1204px;
+    margin:0 auto;
+}
+.header{
+    height:84px;
+    overflow: hidden;
+    background: yellowgreen;
+}
+/* logo */
+.top-logo{
+    float:left;
+    width:176px;
+    height:52px;
+    margin-top:16px;
+    background: red;
+}
+/* nav */
+.nav{
+    float:left;
+    margin-left:63px;
+}
+.nav li{
+    float:left;
+    line-height: 84px;
+}
+.nav li a{
+    padding:0 28px;
+    background: red;
+}
+/* cart */
+.shopping-cart{
+    float:right;
+    width:73px;
+    height:22px;
+    margin-top:31px;
+    background: red;
+}
+/* user-center */
+.user-center{
+    float:right;
+    margin-left:39px;
+}
+.user-center li{
+    float:left;
+    line-height: 84px;
+}
+.user-center li a{
+    padding-right:31px;
+    background: red;
+}
+
+/* 汇总:
+块元素在一行显示: 利用float,父元素浮动，子元素不会继承的，子元素要在一行显示还需要单独添加浮动属性 - 浮动既不会继承也不会传递
+居中: 
++ 文字垂直居中   height = line-height
++ 块元素垂直居中 margin-top = (大容器height - 它的height) / 2
+
++ 文字水平居中   text-align:center
++ 块元素水平居中 width(宽度不能是百分百),marign:0 auto; 
+*/
+
+.swiper{
+    height:360px;
+    position: relative;
+}
+.swiper img{
+    width:100%;
+    height:100%;
+}
+.layer{
+    /* 定位: 重叠 覆盖布局 
+    绝对定位需要加参照物，参照物一般给到父元素身上，如果父元素没有，他会往上查找，直到找到body为止，这样就会以整个浏览器窗口为参照物了
+    一般给父元素加一个属性  position:relative相对定位
+    */
+    position: absolute;
+    top:0;
+    left:0;
+    width:240px;
+    height:360px;
+    /* 背景带透明度可以用rgba, rgb颜色的表示方式  alpha 透明度 [0-1] 0.2 = .2*/
+    background: rgba(2,0,0,.2);
+}
+.layer li{
+    height:73px;
+    background: green;
+}
+.layer li .hover-box{
+    display: none;
+    position: absolute;
+    top:0;
+    left:240px;
+    width:573px;
+    height:360px;
+    background: darkorange;
+}
+/* :hover 鼠标移在谁的身上，直接在这个元素后面紧跟着加一个:hover，中间不能加空格 */
+.layer li:hover .hover-box{
+    display: block;
+}

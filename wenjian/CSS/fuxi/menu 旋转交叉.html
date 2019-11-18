@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- css的旋转属性 transfrom: rotate()   位移 ：translate-->
+    <style>
+        .menu span {
+            display: block;
+            width: 20px;
+            height: 4px;
+            background-color:black
+            ;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .menu:hover .line1 {
+            transform: rotate(45deg);
+            transform-origin: right top;
+            position: absolute;
+        }
+
+        .menu:hover .line2 {
+            transform: rotate(-45deg) translate(3px, -4px);
+            transform-origin: right bottom;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+    </div>
+</body>
+
+</html>

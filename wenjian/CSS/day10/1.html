@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      
+
+        .text {
+            font-size: 200px;
+            font-weight: bold;
+            background: url(http://img2.imgtn.bdimg.com/it/u=2405333422,4249651406&fm=26&gp=0.jpg) no-repeat;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: text 3s linear alternate;
+            background-size: cover;
+        }
+
+
+        @keyframes text {
+            0% {
+                background-position: 10px 80px ;
+            }
+/*  50% {
+                background-position: -200px 50px
+            }  */
+          
+
+            100% {
+                background-position: -100px 30px
+            }
+            transform{}
+
+        }
+    </style>
+</head>
+<!-- audio音乐播放器， autoplay 自动播放  loop循环播放  controls
+    播放器控件play() pause() -->
+
+<body>
+    <div class="text">疾风剑豪</div>
+    <audio src="music.mp3" autoplay loop controls></audio>
+ 
+</body>
+
+</html>

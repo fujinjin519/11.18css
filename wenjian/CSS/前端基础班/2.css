@@ -1,0 +1,22 @@
+* {
+    margin;
+    : 0;
+    padding: ;
+    : 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    width: 33.33%;
+    height: 33.33%;
+    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571401214163&di=3263e47076ce1356ceb78dedea09bc37&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201710%2F05%2F20171005100658_GH2Um.gif);
+}

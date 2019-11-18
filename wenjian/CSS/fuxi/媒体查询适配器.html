@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- meta:vp tab 视口 只要在手机界面 要加这段代码 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* @media screen and  (){}可以简写，每个关键词之间一定要用一个空格隔开，否则会导致媒体查询语法不起作用
+        媒体查询作用；让不同的移动设备达到不同的样式效果具有一定条件的样式覆盖
+         
+        transtion：过度动画，缓冲动画   控制的是css的属性
+        （过度动画的4个属性 :属性名称   持续时间    运动曲线   延迟时间）
+
+        animation :关键帧动画@keyframes
+        （动画的8个属性： 属性名称 持续时间  运动曲线  延迟时间 运动次数  运动方向  运动状态 运动结束的动态
+        ）
+        tranform:变换 --配合上面的动画使用 变换：旋转  位移  缩放（rotate   translate    scale)
+        */
+        .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        @media screen and (max-width:414px) {
+            .box {
+                background: cornflowerblue;
+            }
+        }
+
+        @media screen and (max-width:375px) {
+            .box {
+                background: yellow;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+            .box {
+                background: tomato;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

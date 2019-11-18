@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 鼠标移动到图片上，图片上会出现一个遮罩层（定位）position 
+    绝对定位：遮盖 覆盖 重叠 position：absolute
+    相对定位  position：relative- 一般用来作为绝对定位的参照物
+    固定定位： position：fixed 固定不动
+    默认值  position：static 去掉复用过来的定位属性->
+    <!-- 定位的取值 区别 相同点 
+    区别：1.是否脱离文档流  脱离：绝对和固定定位    不脱离：相对定位
+    
+    2.参照物
+    固定定位：窗口   相对定位：自己原本的位置
+    绝对定位：父元素 有没有属性 position     有参照就是这个父元素 没有继续往上查找，找到body浏览器窗口为止 
+    相同点：1.方位，上下左右 2.层级：z-index
+
+
+    面试题
+    一个元素和另一个元素中始终水平垂直居中（定位）
+   文字水平垂直居中 text-align:center   line-hight=height
+   块元素水平居中    margin:0 auto   
+
+
+-->
+    <style>
+        .pic {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask {
+            position: absolute;
+            top: 200px;
+            left: 0;
+            width: 0;
+            height: 200px;
+            background: rgba(0, 0, 0, .5);
+            transition: all .8s ease;
+          
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .pic:hover .mask{top:0}
+    </style>
+</head>
+
+<body>
+    <div class="pic">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572586476300&di=a0b33e97c03cc94c7c36fd0ab6af8652&imgtype=0&src=http%3A%2F%2Fpic4.zhimg.com%2F50%2Fv2-7fe7e8ae1f388bc1524cf8e3053a8bec_hd.jpg"
+            alt="">
+        <div class="mask">易烊千玺</div>
+    </div>
+</body>
+
+</html>

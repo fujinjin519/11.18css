@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- css的属性 圆角：左上 右上  右下   左下 顺时针方向
+    1个取值 ，四个角都是10px的圆角 border-radius=10px
+    2个值  左上=右下=10px    右上=左下=30px（取对角线）
+    3个值   左上=10px  右上=左下=30px 右下=50px
+    4个值   左上顺时针方向到四个角
+
+
+    左上=10px  右上=20px   boder-radius:10px  20px  0 0;
+    圆形形状：border-radius:50%
+    上椭圆形状：下椭圆  左半圆 右半圆
+  -->
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: black;
+            border-radius: 10px 20px 30px 40px
+        }
+
+        /* 上半圆 宽度是高度的2倍 */
+        .box1 {
+            width: 200px;
+            height: 100px;
+            background: red;
+            border-radius: 200px 200px 0 0;
+        }
+
+        /* 下半圆 */
+        .box2 {
+            width: 200px;
+            height: 100px;
+            background: yellow;
+            border-radius: 0 0 200px 200px;
+        }
+
+        /* 左半圆   高度是宽度的2倍*/
+       .box3 {
+            width: 100px;
+            height: 200px;
+            background:green;
+            border-radius: 200px 0 0  200px ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+
+</html>

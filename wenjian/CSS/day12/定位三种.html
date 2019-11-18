@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--定位：50%不是完全在正中间，需要反向移动宽高的一半
+    1.margin的负值（最常用）
+    2.transform的位移（css3新增属性）
+    3.定位的四个方向为0 margin:auto（移动端） -->
+    <style>
+        .par {
+            width: 500px;
+            height: 500px;
+            background: red;
+            position: relative;
+
+        }
+
+        .son {
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            position: absolute;
+      
+            top:0;left:0;bottom:0;right:0;margin:auto
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="par">
+        <div class="son"></div>
+
+    </div>
+</body>
+
+</html>
